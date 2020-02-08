@@ -1,3 +1,9 @@
 [submodule "themes/terminal"]
 	path = themes/terminal
 	url = https://github.com/panr/hugo-theme-terminal.git
+[submodule "themes/crab"]
+	path = themes/crab
+	url = https://github.com/thomasheller/crab
+[submodule "themes/hugo-notepadium"]
+	path = themes/hugo-notepadium
+	url = https://github.com/cntrump/hugo-notepadium.git

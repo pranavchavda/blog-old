@@ -1,55 +1,55 @@
-baseurl = "/"
-languageCode = "en-us"
-theme = "terminal"
-paginate = 5
+baseURL = "/"
+title = "☕"
+theme = "hugo-notepadium"
+copyright = "©2020 ☕."
+
+languageCode = "en"  # for the RSS generation
+defaultContentLanguage = "en"
+
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+
+# Enable Disqus
+#disqusShortname = "XXX"
+
+# Google Analytics
+#googleAnalytics = "UA-123-45"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = "Jan 02, 2006"  # if unset, default is "2006-01-02"
+readingTime = false  # show reading time after article date
+logo = ""
+slogan = "Random thoughts of a highly caffeinated individual"
+#license = "<a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt=Creative Commons License style=border-width:0 src=https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png /></a><br />This work is licensed under a <a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>."
 
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
+[params.assets]
+css = ["css/fonts.css"]
 
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+[params.comments]
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
-  # show selector to switch language
-  showLanguageSelector = false
+[params.math]
+enable = false # load math globally, default: false. You can always enable math on per page.
+use = "katex"  # builtin: "katex", "mathjax".  default: "katex"
 
-  # set theme to full screen width
-  fullWidthTheme = false
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "xcode"
+darkTheme = "xcode-dark"
 
-  # center theme with default width
-  centerTheme = false
+[params.nav]
+showCategories = false       # /categories/
+showTags = true             # /tags/
 
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
-
-  # set all headings to their default size (depending on browser settings)
-  # it's set to `true` by default
-  # oneHeadingSize = false
-
-[languages]
-  [languages.en]
-    languageName = "English"
-    title = "Pranav"
-    subtitle = "Random thoughts while highly caffeinated"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-
-    [languages.en.params.logo]
-      logoText = "Static"
-      logoHomeLink = "/"
-
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "social"
-        name = "Social Links"
-        url = "/socialmedia"
+[[params.nav.custom]]
+title = "About"
+url = "/about/"
