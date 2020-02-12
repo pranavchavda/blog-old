@@ -1,16 +1,14 @@
 +++
 title= "Static Hugo site hosted on s3 with https using apache"
-dat= 2020-02-05T07:03:34+05:30
+date= 2020-02-12
 draft= false
 author= "Pranav Chavda"
-cover=  "/img/ssg.png"
-tags= ["blog, first"]
+tags= ["blog", "https", "linode", "s3", "static site", "hugo"]
 keywords= ["first blog post"]
 description= "use an linode with apache to pass https to a static site hosted on s3"
 showFullContent= false
 +++
-
-![https][https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Internet2.jpg/220px-Internet2.jpg]
+![https](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Internet2.jpg/220px-Internet2.jpg)
 
 [Linode](https://www.linode.com/) came up with their version of Amazon S3 recently. Object storage is a great way to host a static site. You don't need a server and sites are super easy to deploy. A problem with hosting with object storage though, is that https is not natively supported. 
 
