@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ☕</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on ☕</description>
+    <title>https on ☕</title>
+    <link>/tags/https/</link>
+    <description>Recent content in https on ☕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 ☕.</copyright>
     <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0530</lastBuildDate>
     
-        <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/https/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>/post/second/</guid>
       <description>Linode came up with their version of Amazon S3 recently. Object storage is a great way to host a static site. You don&amp;rsquo;t need a server and sites are super easy to deploy. A problem with hosting with object storage though, is that https is not natively supported.
 AWS users have the option of using cloudfront. This was an option for me, but I didn&amp;rsquo;t want to use two separate providers for one website.</description>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>/post/first/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/first/</guid>
-      <description>First blog post in over a decade! This is my first blog post in 10 years. I don&amp;rsquo;t know why I am starting a new blog. I have no content or reason to start one.
-I recently used the Hugo static site generator to build a new website. It could have been a simple static html site, but I wanted to try out a hip new technology - took me over a week to begin to understand basic hugo/go syntax, but when the new site was done, one wasn&amp;rsquo;t enough.</description>
     </item>
     
   </channel>

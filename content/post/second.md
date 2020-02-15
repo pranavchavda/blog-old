@@ -12,7 +12,7 @@ showFullContent= false
 
 [Linode](https://www.linode.com/) came up with their version of Amazon S3 recently. Object storage is a great way to host a static site. You don't need a server and sites are super easy to deploy. A problem with hosting with object storage though, is that https is not natively supported. 
 
-AWS users have the option of using cloudfront. This was an option for me, but I didn't want to use two separate providers for one website. What I eneded up doing was kind of ironic. I created a linode with apache and used it as a reverse proxy to point to my object storage bucket.
+AWS users have the option of using cloudfront. This was an option for me, but I didn't want to use two separate providers for one website. What I ended up doing was kind of ironic. I created a linode with apache and used it as a reverse proxy to point to my object storage bucket.
 
 ## Here's what I did
 
@@ -24,7 +24,7 @@ AWS users have the option of using cloudfront. This was an option for me, but I 
 ```
 $ apt-get install apache2
 ```
-4. Install certbot
+4. Installed certbot
 ```
 $ apt-get install certbot python-certbot-apache
 ```

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Static Hugo site hosted on s3 with https using apache&nbsp;&ndash;&nbsp;☕</title><link rel="stylesheet" href="/css/core.min.74944aa943a96ac5fff6f6a7fe73247fa2b3e447b1cb440114496410dbbb90d134f9355562889a7ecd2f6cbe99f44a0f.css" integrity="sha384-dJRKqUOpasX/9van/nMkf6Kz5Eexy0QBFElkENu7kNE0&#43;TVVYoiafs0vbL6Z9EoP"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">☕</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a></nav></div></span></div><div class="site slogan"><span class="title">Random thoughts of a highly caffeinated individual</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Static Hugo site hosted on s3 with https using apache</h1><p class="article date">Feb 12, 2020</p></section><article class="article markdown-body"><p><a target="_blank" rel="noopener noreferrer" 
+  href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Internet2.jpg/220px-Internet2.jpg"><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Internet2.jpg/220px-Internet2.jpg"
+        alt="https"/></a></p>
+<p><a href="https://www.linode.com/"target="_blank">Linode</a> came up with their version of Amazon S3 recently. Object storage is a great way to host a static site. You don&rsquo;t need a server and sites are super easy to deploy. A problem with hosting with object storage though, is that https is not natively supported.</p>
+<p>AWS users have the option of using cloudfront. This was an option for me, but I didn&rsquo;t want to use two separate providers for one website. What I eneded up doing was kind of ironic. I created a linode with apache and used it as a reverse proxy to point to my object storage bucket.</p>
+<h2 id="heres-what-i-did">Here&rsquo;s what I did</h2>
+<ol>
+<li>
+<p>Followed the guide at <a href="https://www.linode.com/docs/platform/object-storage/host-static-site-object-storage/">https://www.linode.com/docs/platform/object-storage/host-static-site-object-storage/</a> to set up my object storage bucket as a website and deploy my Hugo site there.</p>
+</li>
+<li>
+<p>Fired up a new Linode instance - the lowest config option available so I don&rsquo;t spend more than $5/month on it.</p>
+</li>
+<li>
+<p>Installed Apache</p>
+</li>
+</ol>
+<pre><code>$ apt-get install apache2
+</code></pre><ol start="4">
+<li>Install certbot</li>
+</ol>
+<pre><code>$ apt-get install certbot python-certbot-apache
+</code></pre><p>I didn&rsquo;t have to mess with PPAs, etc - this was already on a debian repo</p>
+<ol start="5">
+<li>created a new file under /etc/apache2/sites-available called superauto.conf and added the following to it</li>
+</ol>
+<pre><code>&lt;VirtualHost *:80&gt;
+ ServerName superautomatic.in
+ ProxyPreserveHost Off 
+ DocumentRoot /var/www/html
+ ProxyPass / http://location of my bucket/
+ ProxyPassReverse / http://location of my bucket/
+&lt;/VirtualHost&gt;
+</code></pre><ol start="6">
+<li>On the server, ran certbot to install the certificate via let&rsquo;s encrypt</li>
+</ol>
+<pre><code>$ certbot --apache
+</code></pre><ol start="7">
+<li>
+<p>Entered my email and restarted apache after answering a couple of questions for the certificate</p>
+</li>
+<li>
+<p><a href="https://superautomatic.in">https://superautomatic.in</a> is SSL encrypted and is hosted on an object stored bucket.</p>
+</li>
+</ol>
+<p>Now as I mentioned above, it is kind of counter-intuitive to first host your static site on an s3 bucket and then use a server to give it SSL. there are other ways to do it, this is quick and easy. Especially if you are going to use a server for other websites or purposes or have one lying around, a proxy pass entry in apache for a domain won&rsquo;t consume any resources on your server, it will just encrypt and pass the traffic over to the actual host - your s3 bucket.</p>
+</article><section class="article labels"><a class="tag" href=/tags/blog/>blog</a><a class="tag" href=/tags/https/>https</a><a class="tag" href=/tags/linode/>linode</a><a class="tag" href=/tags/s3/>s3</a><a class="tag" href=/tags/static-site/>static site</a><a class="tag" href=/tags/hugo/>hugo</a></section><section class="article navigation"><p><a class="link" href="/post/first/"><span class="li">&rarr;</span>First</a class="link">
+    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 ☕.</p>
+
+</div></section></div>
+</body>
+
+</html>

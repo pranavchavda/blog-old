@@ -7,9 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 ☕.</copyright>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0530</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0530</pubDate>
+      
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>/tags/https/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0530</pubDate>
+      
+      <guid>/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0530</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linode</title>
+      <link>/tags/linode/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0530</pubDate>
+      
+      <guid>/tags/linode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>/tags/s3/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0530</pubDate>
+      
+      <guid>/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static site</title>
+      <link>/tags/static-site/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0530</pubDate>
+      
+      <guid>/tags/static-site/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blog, first</title>
