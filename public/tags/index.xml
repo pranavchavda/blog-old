@@ -7,10 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 ☕.</copyright>
-    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 01:57:21 +0530</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>coffee</title>
+      <link>/tags/coffee/</link>
+      <pubDate>Fri, 28 Feb 2020 01:57:21 +0530</pubDate>
+      
+      <guid>/tags/coffee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>espresso</title>
+      <link>/tags/espresso/</link>
+      <pubDate>Fri, 28 Feb 2020 01:57:21 +0530</pubDate>
+      
+      <guid>/tags/espresso/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grind</title>
+      <link>/tags/grind/</link>
+      <pubDate>Fri, 28 Feb 2020 01:57:21 +0530</pubDate>
+      
+      <guid>/tags/grind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>science</title>
+      <link>/tags/science/</link>
+      <pubDate>Fri, 28 Feb 2020 01:57:21 +0530</pubDate>
+      
+      <guid>/tags/science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>study</title>
+      <link>/tags/study/</link>
+      <pubDate>Fri, 28 Feb 2020 01:57:21 +0530</pubDate>
+      
+      <guid>/tags/study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tasty</title>
+      <link>/tags/tasty/</link>
+      <pubDate>Fri, 28 Feb 2020 01:57:21 +0530</pubDate>
+      
+      <guid>/tags/tasty/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blog</title>

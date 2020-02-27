@@ -9,7 +9,7 @@
   href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Internet2.jpg/220px-Internet2.jpg"><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Internet2.jpg/220px-Internet2.jpg"
         alt="https"/></a></p>
 <p><a href="https://www.linode.com/"target="_blank">Linode</a> came up with their version of Amazon S3 recently. Object storage is a great way to host a static site. You don&rsquo;t need a server and sites are super easy to deploy. A problem with hosting with object storage though, is that https is not natively supported.</p>
-<p>AWS users have the option of using cloudfront. This was an option for me, but I didn&rsquo;t want to use two separate providers for one website. What I eneded up doing was kind of ironic. I created a linode with apache and used it as a reverse proxy to point to my object storage bucket.</p>
+<p>AWS users have the option of using cloudfront. This was an option for me, but I didn&rsquo;t want to use two separate providers for one website. What I ended up doing was kind of ironic. I created a linode with apache and used it as a reverse proxy to point to my object storage bucket.</p>
 <h2 id="heres-what-i-did">Here&rsquo;s what I did</h2>
 <ol>
 <li>
@@ -24,7 +24,7 @@
 </ol>
 <pre><code>$ apt-get install apache2
 </code></pre><ol start="4">
-<li>Install certbot</li>
+<li>Installed certbot</li>
 </ol>
 <pre><code>$ apt-get install certbot python-certbot-apache
 </code></pre><p>I didn&rsquo;t have to mess with PPAs, etc - this was already on a debian repo</p>
@@ -51,11 +51,22 @@
 </li>
 </ol>
 <p>Now as I mentioned above, it is kind of counter-intuitive to first host your static site on an s3 bucket and then use a server to give it SSL. there are other ways to do it, this is quick and easy. Especially if you are going to use a server for other websites or purposes or have one lying around, a proxy pass entry in apache for a domain won&rsquo;t consume any resources on your server, it will just encrypt and pass the traffic over to the actual host - your s3 bucket.</p>
-</article><section class="article labels"><a class="tag" href=/tags/blog/>blog</a><a class="tag" href=/tags/https/>https</a><a class="tag" href=/tags/linode/>linode</a><a class="tag" href=/tags/s3/>s3</a><a class="tag" href=/tags/static-site/>static site</a><a class="tag" href=/tags/hugo/>hugo</a></section><section class="article navigation"><p><a class="link" href="/post/first/"><span class="li">&rarr;</span>First</a class="link">
+</article><section class="article labels"><a class="tag" href=/tags/blog/>blog</a><a class="tag" href=/tags/https/>https</a><a class="tag" href=/tags/linode/>linode</a><a class="tag" href=/tags/s3/>s3</a><a class="tag" href=/tags/static-site/>static site</a><a class="tag" href=/tags/hugo/>hugo</a></section><section class="article navigation"><p><a class="link" href="/post/third/"><span class="li">&larr;</span>Espresso Science Everywhere</a></p><p><a class="link" href="/post/first/"><span class="li">&rarr;</span>First</a class="link">
     </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
     <p class="copyright">©2020 ☕.</p>
 
-</div></section></div>
+</div></section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50206665-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
 </body>
 
 </html>
